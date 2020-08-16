@@ -1,0 +1,7 @@
+<h1>登録キャラクター一覧</h1>
+<% @game.each do |game| %>
+<p>キャラクター名</p>
+<span><%= link_to game.name, show_game_path(game.id)%></span>
+<p>画像</p>
+<%= attachment_image_tag game, :image, :fill, 150, 200, format: 'jpeg' %>
+<% end %>

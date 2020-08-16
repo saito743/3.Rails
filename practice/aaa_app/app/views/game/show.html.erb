@@ -1,0 +1,13 @@
+<h1>キャラクター詳細</h1>
+<h4>キャラクター名</h4>
+<p><%= @game.name %></p>
+<h4>画像</h4>
+<%= attachment_image_tag @game, :image, :fill, 300, 300, format: 'jpeg' %>
+<h4>武器種</h4>
+<p><%= @game.weapon %></p>
+<h4>属性</h4>
+<p><%= @game.category %></p>
+<h4>詳細設定</h4>
+<p><%= @game.dateils %></p>
+<%= link_to "編集", edit_show_path %>
+<%= link_to "削除", destroy_game_path(@game.id), method: :delete, data: {confirm: "削除しますか？"} %>
