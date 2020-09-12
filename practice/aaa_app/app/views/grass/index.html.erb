@@ -1,5 +1,0 @@
-<h1>登録植物一覧</h1>
-<% @grasses.each do |list| %>
-  <p>名称</p>
-  <span><%= link_to list.title, show_grass_path(@grasses.ids) %></span>
-<% end %>
